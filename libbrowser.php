@@ -488,7 +488,7 @@ class rof_browser {
 		$collapse = '';
 		$listStyle = 'list-none list-item';
 		if ($nbEnf) {
-			$style = 'collapse curser-point collapsed';
+			$style = 'collapse curser-point collapsed show';
 			$collapse = ' + ';
             $classsel = 'info';
             $titleSel = 'Cliquer sur &#x25B6; pour développer l\'arborescence';
