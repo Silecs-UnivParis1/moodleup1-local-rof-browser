@@ -52,7 +52,7 @@ function print_rof() {
 	$components = getRofComponents();
      $list = '<div>Rechercher un élément pédagogique dans l\'offre de formation de l\'établissement</div>';
 	$list .= '<div class="select-elem">';
-	$list .= '<select class="selectmenu" id="select-2">';
+	$list .= '<select class="selectmenu custom-select" id="select-2">';
 	$list .= '<option selected="selected" data-deep="2">Sélectionner la composante</option>';
 	foreach ($components as $c) {
         $id = 'deep2_' . $c->number;
@@ -387,7 +387,7 @@ class rof_browser {
 
 		if ($nbSubList) {
 			$list = '<div class="select-elem">';
-			$list .= '<select class="selectmenu" id="select-' . $nivEnf . '">';
+			$list .= '<select class="selectmenu custom-select" id="select-' . $nivEnf . '">';
 			$list .= '<option selected="selected" data-deep="' . $nivEnf . '">Sélectionner le diplôme</option>';
 				foreach ($subList as $id => $sl) {
 					$list .= $this->print_option($sl, $nivEnf);
@@ -417,7 +417,7 @@ class rof_browser {
             }
 
 			$list = '<div class="select-elem">';
-			$list .= '<select class="selectmenu select-typedip" id="select-' . $nivEnf . '-typedip">';
+			$list .= '<select class="selectmenu custom-select select-typedip" id="select-' . $nivEnf . '-typedip">';
 			$list .= '<option selected="selected" data-deep="' . $nivEnf . '">Sélectionner le type de diplôme</option>';
             foreach ($this->constant_diplome as $code => $label) {
                 if (array_key_exists($code, $listdipint)) {
