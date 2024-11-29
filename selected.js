@@ -2,7 +2,10 @@ jQuery(function () {
     var selected = new Array();
     var visited = new Array();
     var reference = new Array();
-	var rootUrl = $('script[src$="/selected.js"]').attr('src').replace('/selected.js', '/');
+    let jsUrl = $('script[src$="/selected.js"]').attr('src');
+    let ind = jsUrl.lastIndexOf('/lib/javascript.php');
+    let rootUrl = jsUrl.substr(0, ind);
+    rootUrl = rootUrl + '/local/rof_browser/';
     $('div.item-select').load(rootUrl + 'ajax.php');
 
     $('div.item-select').on("change", ".selectmenu", function(event) {
