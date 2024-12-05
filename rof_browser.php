@@ -12,11 +12,11 @@ has_capability('enrol/cohort:unenrol', $systemcontext);
 $PAGE->set_url('/local/rof_browser/rof_browser.php');
 $PAGE->set_title('Components browser');
 
+$PAGE->requires->js(new moodle_url('/local/jquery/jquery.js'), true);
+$PAGE->requires->js(new moodle_url('/local/rof_browser/browser.js'), true);
 
-$PAGE->requires->js('/local/jquery/jquery.js');
-$PAGE->requires->js('/local/rof_browser/browser.js');
+$PAGE->requires->css(new moodle_url('/local/rof_browser/browser.css'));
 
-$PAGE->requires->css('/local/rof_browser/browser.css');
 
 echo $OUTPUT->header();
 
