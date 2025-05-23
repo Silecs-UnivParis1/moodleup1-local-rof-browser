@@ -8,7 +8,7 @@ require_once($CFG->dirroot . '/local/roftools/roflib.php');
  */
 function getRofComponents() {
     global $DB;
-    $components = $DB->get_records('rof_component');
+    $components = $DB->get_records('rof_component', null, 'name');
     return $components;
 }
 /**
