@@ -154,9 +154,10 @@ jQuery(function () {
         if (readonly === true) {
             suppr = '';
         }
+        let title = chemin.replace(/"/g, "&quot;")
         var elem = '<div class="item-selected" id="select_'+path+'">'
 				+suppr
-				+'<div class="intitule-selected" title="'+chemin+'">'+intitule+'</div>'
+				+'<div class="intitule-selected" title="'+title+'">'+intitule+'</div>'
 				+'<input type="hidden" name="'+tabItem+'" value="'+path+'"/>'
 				+'</div>';
         return elem;
